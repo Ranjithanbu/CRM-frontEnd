@@ -1,8 +1,29 @@
-# React + Vite
+# CRMplus site
+i have done simple Customer Relationship Management site using React js and Node js & Express js  & mongoDB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### front-End deployed URL `https://mycrmplus.netlify.app/`
+#### Back-End deployed URL `https://crm-backend-okn5.onrender.com`
+#### Admin Login credential
+#### `userName : Nivin`
+#### `Password : 124567`
 
-Currently, two official plugins are available:
+as a admin, admin can do all action apart from the normal user  like adding new data and removing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### site flow 
+after hitting `https://mycrmplus.netlify.app/` this URL it will navigate to home page there you can see some pages About,Sign-in,sign-up pages
+
+#### Sign-up 
+we can sign up into two ways
+using `userName,Email,Password ` and 
+using `Google authentication`
+##### by default everyone can be a user and user can do limited action like updating profile images and can see other details
+
+#### Additional features i have used 
+- formik and yup validation
+- google authentication (oAuth)
+- React Redux
+- Redux-Persist
+- express
+- multer 
+- nodemailer 
+- mongoose ,etc
