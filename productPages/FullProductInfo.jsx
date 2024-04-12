@@ -25,7 +25,7 @@ const FullProductInfo = () => {
       <ToastContainer />
 
       <div class="card my-5 mx-3 card-body " style={{ maxHeight: '100%' }}>
-        <span ><span className='productInfo'>Product Info</span> <button type='button' className='btn btn-info ms-auto' onClick={() => { navigate(-1) }}>Back</button></span>
+        <div ><span className='productInfo'>Product Info</span> <button type='button' className='btn btn-info ' onClick={() => { navigate(-1) }}>Back</button></div>
         <div class="row g-0">
           <div class="col-md-4">
             <img src={getproduct.image} class="img-fluid rounded-start p-4" alt="product" width={400} />
