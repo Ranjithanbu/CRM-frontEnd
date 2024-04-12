@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* 
+{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+   
+  } */
+
+  .nav-item:hover{
+    text-decoration: underline 2px solid white;
+    text-underline-offset:4px;
+    
+  }
+  
+  .mainNav{
+ 
+background: #264653;
+font-weight:bold;
+  }
+  
+.homePage{
+  
+  background-color: #023e8a;
+  color: white;
+  width: 100vw;
+  height: 100;
+  
+  
+} 
+.display-2 {
+font-weight:500;
+}
+.homecontent{
+width: 60vw;
+height:15vh;
+  color:aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+margin-bottom: auto; 
+font-size:large;  
+}
+
+.homeText{
+ 
+ margin-top:1.5em;
+ margin-bottom:1em;
+}
+.btn:hover{
+background: blue;
+}
+.greetText{
+
+  color:white;
+ font-weight: bold; 
+  -webkit-text-stroke:2px #264653;
+
+}
+
+.shadows{
+  
+  height: auto ;
+  background-color: transparent;
+  border:1px solid blue;
+  box-shadow:5px 3px 10px blue;
+}
+.p-fixed{
+position: fixed;
+  width:100%;
+  height: 100vh;
+  background-image: url(../bg-images/home-hero-bg-2.jpg);
+  font-family: "Roboto", sans-serif;  
+  font-weight:400;
+  
+}
+.aboutPage{
+  height:auto;
+  width: 100%;
+  
+  background-image: url(../bg-images/home-hero-bg-2.jpg);
+  font-size: larger;
+}
+
+.text-decor{
+  -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color:blue;
+}
+.footerContent{
+
+background: #000;
+width:100%;
+height:auto;
+}
+.footerSymbol {
+  width:100%;
+  height: 100%;
+  display: flex;
+ flex-direction:row;
+ justify-content: center;
+ align-items: center;
+
+}
+.footertext li{
+  text-decoration: none;
+  list-style: none;
+  color: antiquewhite;
+  
+}
+.footertext a{
+  text-decoration: none;
+  color: white;
+
+}
+@media  (max-width:800px) {
+  .footerSymbol {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: start;
+  margin-top:5px;
+  
+ 
+  }
+}
+
+.dropdown-toggle::after{
+  content: none;
+}
+
+
+.dropdown-item{
+  width:max-content;
+margin-left:auto;
+margin-right: auto;
+}
+#back-btn:hover{
+  display: inline;
+  color: #000;
+}
+
+.img-round{
+  border-radius:100%;
+}
+
+.spinnerDiv{
+  position:relative;
+  width: 100%;
+  height: 100vh;
+  background:blueviolet;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.nav-item a{
+  text-decoration: none;
+  color: white;
+  margin-right: 25px;
+padding: 3px;
+
+}
+.nav-item a.active {
+
+  text-decoration: underline 2px solid white;
+    text-underline-offset:4px;
+     
+}

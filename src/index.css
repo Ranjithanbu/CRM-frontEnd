@@ -1,0 +1,11 @@
+/* <BrowserRouter>
+<Routes>
+<Route path='/' element={<Dashboard/>}/>
+<Route path='/leads' element={<Leads/>}/>
+<Route path='/customers' element={<Customers/>}/>
+<Route path='/products' element={<Products/>}/>
+<Route path='/appointment' element={<Appointment/>}/>
+<Route path='/announcement' element={<Announcement/>}/>
+
+</Routes>
+</BrowserRouter> */
