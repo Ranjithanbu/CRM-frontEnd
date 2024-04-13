@@ -10,7 +10,7 @@ i have done simple Customer Relationship Management site using React js and Node
 as a admin, admin can do all action apart from the normal user  like adding new data and removing
 
 ### site flow 
-after hitting `https://mycrmplus.netlify.app/` this URL it will navigate to home page there you can see some pages About,Sign-in,sign-up pages
+after hitting `https://mycrmplus.netlify.app/` this URL it will navigate you  to home page there you can see some pages such as About,Sign-in,sign-up pages
 
 #### Sign-up 
 we can sign up into two ways
