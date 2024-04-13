@@ -1,6 +1,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'
+import { useState } from 'react';
+import ClipLoader from "react-spinners/ClipLoader";
 import { NavLink, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,7 +11,7 @@ import { useDispatch } from "react-redux";
 import { AddUser } from '../slices/UserSlice';
 import Oauth from '../components/Oauth';
 const SignIn = () => {
-  
+    const [spinner, setSpinner] = useState(false)
  //for navigation purpose   
     const navigate = useNavigate()
  //for updating redux state   
@@ -32,12 +34,15 @@ const SignIn = () => {
         initialValues: initialValue,
         validationSchema,
         onSubmit: async (values) => {
-
+            setSpinner(true)
             console.log(values);
             await axios.post('https://crm-backend-okn5.onrender.com/api/loginUser', values).then(res => {
-                toast(res.data.message)
+                
+            setSpinner(false)
+            toast(res.data.message)
 
                 dispatch(AddUser(res.data.data))
+                
                 setTimeout(() => {
                     if (res.data.data) {
                         navigate('/dashboardHome/dashboard')
@@ -45,7 +50,9 @@ const SignIn = () => {
                 }, 5000)
 
             })
-                .catch(err => { toast(err.message) })
+                .catch(err => {
+                    setSpinner(false)
+                    toast(err.message) })
 
 
 
@@ -78,7 +85,7 @@ const SignIn = () => {
                         </div>
 
                         <NavLink to={'/passwordResetAuth'}><span className='text-black mb-2'>forgot password</span></NavLink>
-                        <button className="btn btn-primary w-100 py-2 mx-auto" type="submit">log in</button>
+                        <button className="btn btn-primary w-100 py-2 mx-auto" type="submit">{spinner?<div className='mx-auto'><ClipLoader color="#36d7b7" size={25} /></div>:'log in'}</button>
                         <Oauth />
                     </div>
 

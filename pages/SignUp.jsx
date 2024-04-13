@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-
+import ClipLoader from "react-spinners/ClipLoader";
 import { NavLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup'
 import Oauth from '../components/Oauth';
 const SignUp = () => {
-    
+    const [spinner, setSpinner] = useState(false)
     const navigate = useNavigate()
 //initial value for formik validation
     const initialValue = {
@@ -33,11 +33,11 @@ const SignUp = () => {
         initialValues: initialValue,
         validationSchema,
         onSubmit: async (values) => {
-
+               setSpinner(true)
             await axios.post('https://crm-backend-okn5.onrender.com/api/registerUser', values)
                 .then(res => {
                     toast(res.data.message)
-
+                    setSpinner(false)    
                     setTimeout(() => {
                         if (res.data.success) {
                             navigate('/signIn')
@@ -48,6 +48,7 @@ const SignUp = () => {
 
                 })
                 .catch(err => {
+                    setSpinner(false)
                     toast(err.message)
 
                 })
@@ -86,7 +87,7 @@ const SignUp = () => {
                         </div>
 
                         <p>already have an account <NavLink to='/signIn' style={{ color: 'black', }}>SignIn</NavLink></p>
-                        <button className="btn btn-primary w-100 py-2 mx-auto" type="submit">SignUp</button>
+                        <button className="btn btn-primary w-100 py-2 mx-auto" type="submit">{spinner?<div className='mx-auto'><ClipLoader color="#36d7b7" size={30} /></div>: 'SignUp'}</button>
                         <Oauth />
                     </div>
 
