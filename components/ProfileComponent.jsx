@@ -12,7 +12,7 @@ const ProfileComponent = () => {
     const navigate = useNavigate()
     const [file, setfile] = useState([])
     const dispatch = useDispatch()
-
+console.log(user.image);
 //sending profile image file to backend
 
     const handleClick = async (e) => {
@@ -37,6 +37,7 @@ const ProfileComponent = () => {
                 <div className="card mt-4">
                     <button className='ms-auto text-decoration-none fs-6 m-2 btn btn-info rounded-pill hover-shadow' onClick={() => { navigate(-1) }} ><i class="fa-solid fa-person-walking-arrow-loop-left hover-overlay "></i></button>
                     <img className='img-fluid mx-auto mt-2 img-round hover-' src={`https://crm-backend-okn5.onrender.com/images/${user.image}`} alt="profile" width={200} />
+                    
                     <input type="file" name="file" id="file" className='mt-2 mx-auto' onChange={(e) => { setfile(e.target.files[0]) }} />
                     <button onClick={handleClick} className='btn btn-secondary w-25 mx-auto m-1'>
                         update

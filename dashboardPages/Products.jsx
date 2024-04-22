@@ -90,11 +90,11 @@ const Products = () => {
                   <td className='col-sm-2'>{item.rate}</td>
                   <td className='col-sm-2'>{item.stock}</td>
 
-                  {user.role === 'admin' ? <td onClick={() => { handleEdit(item._id) }}><i class="fa-solid fa-pen-to-square btn"></i></td> : null}
+                  {user.role === 'admin' ? <td title='Edit' onClick={() => { handleEdit(item._id) }}><i class="fa-solid fa-pen-to-square btn"></i></td> : null}
 
-                  {user.role === 'admin' ? <td onClick={() => handleClick(item._id)}><i class="fa-solid fa-eye btn"></i></td> : null}
+                  {user.role === 'admin' ? <td title='View' onClick={() => handleClick(item._id)}><i class="fa-solid fa-eye btn"></i></td> : null}
 
-                  {user.role === 'admin' ? <td onClick={() => handleDelete(item._id)}><i class="fa-solid fa-trash btn"></i></td> : null}
+                  {user.role === 'admin' ? <td title='Remove' onClick={() => handleDelete(item._id)}><i class="fa-solid fa-trash btn"></i></td> : null}
                 </tr>
               )
             })}

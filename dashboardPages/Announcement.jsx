@@ -104,7 +104,7 @@ const Announcement = () => {
                                     <img src="https://i0.wp.com/thenicheguru.com/wp-content/uploads/2021/09/article-marketing.jpg" className="img-fluid rounded-start" alt="..." />
                                 </div>
                                 <div className="col-md-8">
-                                    {user.role === 'admin' ? <div className='m-3 float-end'><button className='btn btn-danger rounded-circle' onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash fa-2x "></i></button></div> : null}
+                                    {user.role === 'admin' ? <div className='m-3 float-end'><button title='Remove' className='btn btn-danger rounded-circle' onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash fa-2x "></i></button></div> : null}
                                     <div className="newsCard" >
                                         <h5 className="card-title m-2 fs-4 text-secondary">{item.subject}</h5>
                                         <p className="card-text m-2 text-info fs-5">{item.description}</p>

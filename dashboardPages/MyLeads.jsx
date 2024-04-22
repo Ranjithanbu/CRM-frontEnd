@@ -32,6 +32,12 @@ console.log(length)
     navigate('/dashboardHome/fullLead')
 
   }
+  const handleBack = () => {
+    navigate(-1)
+}
+
+
+
   return (
 
 <div className='container'>
@@ -39,6 +45,7 @@ console.log(length)
       <div className='d-flex border-3 border-bottom m-2'>
         <h5>My Leads</h5>
         <a className='btn btn-primary ms-auto mb-1' href='#'>Total Leads <i class={total}></i></a>
+        <button type='button' className='btn btn-info ms-auto' onClick={handleBack}>Back</button>
       </div>
       {length>0?<div className='row'>
         <div className='row'>

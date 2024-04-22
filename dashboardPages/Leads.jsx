@@ -80,9 +80,9 @@ const Leads = () => {
                   </div>
                   <div className="col-md-8">
                     {user.role === 'admin' ? <div className='m-3 float-end'>
-                      <button className='btn rounded-circle m-1' onClick={() => handleClick(item._id)}><i class="fa-solid fa-eye"></i></button>
-                      <button className='btn  rounded-circle m-1' onClick={() => { handleEdit(item._id) }}><i class="fa-solid fa-pen-to-square"></i></button>
-                      <button className='btn rounded-circle m-1' onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash "></i></button>
+                      <button title='View' className='btn rounded-circle m-1' onClick={() => handleClick(item._id)}><i class="fa-solid fa-eye"></i></button>
+                      <button title='Edit' className='btn  rounded-circle m-1' onClick={() => { handleEdit(item._id) }}><i class="fa-solid fa-pen-to-square"></i></button>
+                      <button title='Remove' className='btn rounded-circle m-1' onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash "></i></button>
                     </div> : null}
                     <div className="newsCard" >
                       <h5 className="card-title m-2 fs-4 text-secondary text-capitalize">{item.name}</h5>

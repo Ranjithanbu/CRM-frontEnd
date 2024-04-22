@@ -113,7 +113,7 @@ const ref=useRef()
                                     <img src="https://media.emailonacid.com/wp-content/uploads/2018/05/EOA_2018GmailUpdate.jpg" className="img-fluid rounded-start img-thumbnail" alt="..." />
                                 </div>
                                 <div className="col-md-8">
-                                    {user.role === 'admin' ? <div className='m-3 float-end'><button className='btn rounded-circle' onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash "></i></button></div> : null}
+                                    {user.role === 'admin' ? <div className='m-3 float-end'><button title='Remove' className='btn rounded-circle' onClick={() => handleDelete(item._id)}><i className="fa-solid fa-trash "></i></button></div> : null}
                                     <div className="newsCard" >
                                         <h5 className="card-title m-2 fs-4 text-secondary">From : {item.sender}</h5>
                                         <p className="card-text m-2 text-info fs-5">To : {item.reciever}</p>
