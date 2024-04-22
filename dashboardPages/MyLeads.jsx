@@ -18,7 +18,7 @@ const length=myLead.length
 console.log(length)
   //fetching  leads from server 
   const fetchMyLeads = async () => {
-    await axios.get(`https://crm-backend-okn5.onrender.com/lead/myLeads/${user.userName}`)
+    await axios.get(`https://crm-backend-okn5.onrender.com/${user.userName}`)
       .then(res => setMylead(res.data.data))
       .catch(err => console.log(err))
 
