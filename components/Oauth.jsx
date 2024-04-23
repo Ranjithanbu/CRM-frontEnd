@@ -49,7 +49,7 @@ const Oauth = () => {
     return (
         <div>
 
-            <button type='button' className='btn w-100 btn-primary text-white my-2' onClick={handleClick}>{spinner?<div className='mx-auto'><ClipLoader color="#36d7b7" size={30} /></div>:<i class="fa-brands fa-google text-warning" ></i>}Continue With Google</button>
+            <button type='button' className='btn w-100 btn-primary text-white my-2' onClick={handleClick}>{spinner?<div className='mx-auto'><ClipLoader color="#36d7b7" size={30} /></div>:<i class="fa-brands fa-google text-warning me-2" ></i>}Continue With Google</button>
             <ToastContainer />
         </div>
     );

@@ -83,8 +83,9 @@ const SignIn = () => {
                             <input type="password" name='password' className="form-control m-1 bg-transparent" id="password" data-testid="royal_pass" placeholder="Password" onChange={formik.handleChange} />
                             <p>{formik.errors.password}</p>
                         </div>
-
-                        <NavLink to={'/passwordResetAuth'}><span className='text-black mb-2'>forgot password</span></NavLink>
+                        
+                        <NavLink to={'/passwordResetAuth'}><span className='text-white mb-1'>forgot password</span></NavLink>
+                        <p className='my-2'>You don't have an account<NavLink to={'/signUp'} className={'text-black ms-1'}>clickHere</NavLink></p>
                         <button className="btn btn-primary w-100 py-2 mx-auto" type="submit">{spinner?<div className='mx-auto'><ClipLoader color="#36d7b7" size={25} /></div>:'log in'}</button>
                         <Oauth />
                     </div>
