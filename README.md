@@ -28,4 +28,4 @@ using `Google authentication`
 - nodemailer 
 - mongoose ,etc
 #### Dashboard Page
-- in dashboard page top-right-corner we can see our profile icon and user name ,by clicking the `profile icon` we can update our profile image and we see our assigned leads also  , i have added reactjs charts to improve user experience  and we can see some leads and customer details
+- in dashboard page top-right-corner we can see our profile icon and user name ,by clicking the `profile icon` we can update our profile image and we can view our assigned leads also  , i have added reactjs charts to improve user experience  and also added leads and customer details
