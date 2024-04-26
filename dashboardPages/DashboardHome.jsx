@@ -52,21 +52,25 @@ const DashboardHome = ({ setNavStatus }) => {
     //logout function
 
     const handleLogOut = async () => {
+try {
+    toast('sign out success')
+setTimeout(() => {
+    setNavStatus(true)
+    dispatch(AddUser(''))
 
-        try {
-            dispatch(AddUser(''))
-            toast('LogOut success')
-        } catch (error) {
-            toast(error.message)
-        }
-        navigate('/')
+},4000);
+   
+} catch (error) {
+    toast('logout error')
+}
+        
     }
 
     return (
 
 
         profile ? <div className=''>
-
+<ToastContainer/>
             <nav class="navbar sticky-top   nav-bg container-fluid">
                 <div class="container-fluid">
                     <a class="navbar-brand text-primary" href="#"><img src="https://cdn-icons-png.flaticon.com/512/906/906341.png" width={35} alt="logo" /><span className='ms-2 text-dark'>CRMplus</span></a>
@@ -80,7 +84,7 @@ const DashboardHome = ({ setNavStatus }) => {
                         <ul class="dropdown-menu dropdown-menu-end ">
                             <li><Link class="dropdown-item btn rounded-pill" to="/dashboardHome/profile">Profile</Link></li>
                             <li><Link className='dropdown-item btn rounded-pill' to='/dashboardHome/myLeads'>My Leads</Link></li>
-                            <li><button class="dropdown-item btn rounded-pill" onClick={handleLogOut}>Log out</button></li>
+                            <li><button class="dropdown-item btn rounded-pill" onClick={()=>handleLogOut()}>Log out</button></li>
                         </ul>
                     </div>
 
